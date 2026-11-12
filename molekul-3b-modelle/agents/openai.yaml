@@ -1,0 +1,14 @@
+interface:
+  display_name: Etkileşimli 3B Molekül Modelleme
+  short_description: Doğrulanmış, döndürülebilen 3B molekül modelleri oluştur
+  default_prompt: $molekul-3b-modelle ile benzen ve siklohekzanın yapılarını doğrulayıp
+    etkileşimli 3B modellerini karşılaştır.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

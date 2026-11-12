@@ -1,0 +1,14 @@
+interface:
+  display_name: Ders konu anlatımı
+  short_description: Görselli ve kontrol edilmiş konu anlatımı hazırla
+  default_prompt: Belirttiğim konu için kazanımlara uygun, görselli ve doğruluğu kontrol
+    edilmiş bir PDF ders anlatımı hazırla.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
