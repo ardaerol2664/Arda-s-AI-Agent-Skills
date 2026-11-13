@@ -43,12 +43,12 @@ H dahil sabit atom kimliği, element, formal yük ve Å cinsinden x/y/z; bağ u�
 
 Sohbet görselleştirmesi için güncel `visualize` talimatlarını oku ve uygula. Kesin atom-bağ yapısını sayısal koordinatlardan çiz; üretken resim aracı kullanma.
 
-Küre/çubuk, doğru derinlik/örtüşme ve çoklu bağ düzeni kullan. Fare/tek parmakla döndürme ve erişilebilir sınırlı zoom sağla. Öğretici ise üstten/yandan/başlangıç görünümü ekle; gereksiz özellik ekleme. İlk kare dolu, etiketler okunaklı ve renk dışında sembolle de anlaşılır olsun. 320 px ve tablet yönlerinde düzen sığsın. Karşılaştırmada ölçek/renk tutarlı; dar ekranda modeller alt alta olsun. Aromatik çemberi elektron düzeninin şematik simgesi olarak açıkla.
+Küre/çubuk, doğru derinlik/örtüşme ve çoklu bağ düzeni kullan. Fare/tek parmakla döndürme ve erişilebilir sınırlı zoom sağla. Her modelde görünür, Türkçe etiketli **Sola, Sağa, Yukarı, Aşağı** döndürme; **Büyüt (+), Küçült (−)** yakınlaştırma; **Üstten, Yandan, Başlangıç** görünüm düğmelerini zorunlu olarak ekle. Sürükleme, tekerlek veya dokunma hareketleri bu düğmelerin yerine geçmesin; gereksiz özellik ekleme. İlk kare dolu, etiketler okunaklı ve renk dışında sembolle de anlaşılır olsun. 320 px ve tablet yönlerinde düzen sığsın. Karşılaştırmada ölçek/renk tutarlı; dar ekranda modeller alt alta olsun. Aromatik çemberi elektron düzeninin şematik simgesi olarak açıkla.
 
 ## 4. Doğrula ve teslim et
 
 `python <skill-directory>/scripts/validate_model.py <model.json>` ile temel sayım/yük/bağ/koordinat kontrolünü çalıştır; betiğin R/S, E/Z, aromatiklik veya kimlik doğrulamadığını unutma. Kaynakla kimlik/stereo ve modele özgü geometriyi ayrıca karşılaştır: metan tetrahedral, etin doğrusal, benzen düzlemsel/eşdeğer C–C; siklohekzan uygun sandalye geometrisinde olsun. π bağını serbest döndürme.
 
-Yeni/değişmiş motor için sözdizimi, ilk kare, sürükleme, zoom/görünüm kontrolleri, dokunma ve dar/geniş düzeni test et. Aynı motorla yalnız veri değiştiyse yeni molekülün geometri, sığma ve temel etkileşimine odaklan; değişmeyen özellikleri baştan kapsamlı test etme. Kullanılabilir tarayıcıyı dene; ekran görüntüsünü etkileşim kanıtı sayma. Test edilmeyeni test edilmiş gibi raporlama.
+Yeni/değişmiş motor için sözdizimi, ilk kare, sürükleme, zorunlu yön/zoom/görünüm düğmelerinin her biri, dokunma ve dar/geniş düzeni test et. Aynı motorla yalnız veri değiştiyse yeni molekülün geometri, sığma ve temel etkileşimine odaklan; değişmeyen özellikleri baştan kapsamlı test etme. Kullanılabilir tarayıcıyı dene; ekran görüntüsünü etkileşim kanıtı sayma. Test edilmeyeni test edilmiş gibi raporlama.
 
 Modeli sohbet içinde sun; gerekli görünüm açıklaması, kaynak atfı ve idealizasyon/konformer sınırlamasını kısa belirt.
