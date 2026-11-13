@@ -31,6 +31,7 @@ Aromatik çemberi halka düzleminde oluşturup aynı dönüşe tabi tut. Çember
 - Zoom'u pozitif alt/üst sınırda tut; modeli kaybetme. Tekerleği yalnızca model üzerinde/odakta işle. Tekerleksiz kullanıcı için erişilebilir zoom kontrolü sun.
 - Pinch eklenirse etkin pointer haritasında mesafe oranını kullan; bir parmağa dönüşte başlangıç değerlerini sıfırla. Test edilmemiş pinch'i destekleniyor diye anlatma.
 - Her modelde zorunlu düğmeler sun: **Sola, Sağa, Yukarı, Aşağı** (kameraya göre sabit adımla döndürme), **Büyüt (+), Küçült (−)** (sınırlı zoom), **Üstten, Yandan, Başlangıç** (hazır kamera açıları). Başlangıç düğmesi ilk kamera açısını ve zoom değerini geri getirsin.
+- Kontrol sırasını **Başlangıç · Üstten · Yandan → model alanı → döndürme ve Büyüt/Küçült düğmeleri** olarak kur. Görünüm düğmeleri modelin üstünde, diğerleri altında yer alsın; mobil/tablette satır kaydırırken bu grupları yer değiştirme veya modelin üzerine bindirme.
 - Düğmeleri görünür, Türkçe etiketli, klavyeyle kullanılabilir yerel `button` öğeleri olarak oluştur; yalnız simge kullanılıyorsa erişilebilir Türkçe ad ekle. Sürükleme/tekerlek/pinch bu düğmelerin yerine geçmesin. Kontroller 320 px ve tablet yönlerinde taşmadan satırlara dağılsın; dokunma hedefleri yaklaşık 44×44 px olsun.
 - `requestAnimationFrame` ile ihtiyaç halinde çiz. Varsayılan sürekli dönüş ve gereksiz döngü ekleme; azaltılmış hareket tercihine uy.
 - H gizleme grafiği değiştirmesin; ilgili çubukları da gizle. Etiketleri okunaklı konumlandır; çakışmada isteğe bağlı etiketleri azalt.
@@ -43,7 +44,7 @@ Tema kurallarına uy; elementleri sembolle de ayırt et. H'nin zeminde kaybolmas
 2. İlk karede atomlar/bağlar görünür ve alan içinde olsun; konsolu incele.
 3. Sürükleme sonrası en az bir projeksiyon değişsin, kaynak atomlar arası mesafeler sabit kalsın. Dört yön düğmesinin her biri doğru yönde döndürsün; Büyüt/Küçült ölçeği sınırlar içinde değiştirsin; Üstten/Yandan doğru kamera açısını seçsin; Başlangıç ilk kamera açısını ve zoom değerini geri getirsin.
 4. Tek parmak akışını ve varsa pinch'i emüle et. Parmak kalkınca kendi kendine dönmesin.
-5. 320 px, tablet yatay ve geniş görünümde taşma/çakışmayı denetle. Açık/koyu temada okunabilirliği kontrol et.
+5. 320 px, tablet yatay ve geniş görünümde taşma/çakışmayı denetle. Açık/koyu temada okunabilirliği ve görünüm düğmelerinin üstte, diğerlerinin altta kaldığını kontrol et.
 6. Benzen yandan düzlemsel, siklohekzan kıvrımlı olsun. Stereomerleri döndürmek ayna dönüşümü yapmasın.
 
 Tarayıcı olanağı varsa gerçek etkileşim veya otomasyon kullan. İncelenmemiş ekran görüntüsüne dayanarak görsel kontrol yapılmış gibi raporlama.
