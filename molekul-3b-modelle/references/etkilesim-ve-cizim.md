@@ -36,6 +36,14 @@ Aromatik çemberi halka düzleminde oluşturup aynı dönüşe tabi tut. Çember
 - `requestAnimationFrame` ile ihtiyaç halinde çiz. Varsayılan sürekli dönüş ve gereksiz döngü ekleme; azaltılmış hareket tercihine uy.
 - H gizleme grafiği değiştirmesin; ilgili çubukları da gizle. Etiketleri okunaklı konumlandır; çakışmada isteğe bağlı etiketleri azalt.
 
+## Sürükleme yönü — sık hata
+
+- Fare/parmak hareketini ekran koordinatlarına göre eşleştir: sola sürüklemede modelin kullanıcıya bakan yüzü sola, sağa sürüklemede sağa; aşağı sürüklemede aşağı, yukarı sürüklemede yukarı dönsün. Bu kural bütün atomların aynı yönde ötelenmesi anlamına gelmez; hareket gerçek 3B dönüş olsun.
+- Ekranda Y'nin aşağı, 3B kamera uzayında yukarı artabileceğini hesaba kat. Hareket farkının işaretini, kamera dönüşü ile model dönüşü arasındaki tersliği ve quaternion/matris çarpım sırasını birlikte kontrol et. Tek bir motorun işaretlerini başka motora körlemesine kopyalama.
+- Dönüşü kameranın sağ/yukarı eksenlerine göre uygula; molekülün yerel eksenlerini kullanıp model çevrildikçe sürükleme yönünü tersine döndürme. Düğmeler ve sürükleme aynı yön sözleşmesini kullansın.
+- Başlangıç, Üstten ve Yandan açılarında ve model yaklaşık 180° çevrildikten sonra dört ayrı kısa sürüklemeyi fareyle ve tek parmakla dene. Kullanıcıya bakan, merkezden uzakta seçilebilen bir yüzey noktasının ilk hareketini ekran üzerinde izle; simetrik molekül yönü gizliyorsa geçici asimetrik bir test işareti kullan ve teslimden önce kaldır. Yalnızca dönüş değerinin değişmesi testin geçtiği anlamına gelmesin.
+- Sola ardından eşit miktarda sağa ve aşağı ardından eşit miktarda yukarı sürüklemenin, araya başka eksen hareketi girmeden, önceki açıyı yaklaşık geri getirdiğini kontrol et. Hız, zoom veya pointer türü değişince yön eşlemesi değişmesin. Terslik varsa modeli teslim etmeden düzelt; test çalıştırılamadıysa doğrulanmış gibi bildirme.
+
 ## Düzen ve test
 
 Tema kurallarına uy; elementleri sembolle de ayırt et. H'nin zeminde kaybolmasını önle. Model alanını baskın tut; istenmeyen sahte değer panelleri ekleme. Açıklamayı normal yanıta taşı.
@@ -43,7 +51,7 @@ Tema kurallarına uy; elementleri sembolle de ayırt et. H'nin zeminde kaybolmas
 1. Denetleyiciyi çalıştır; kaynakla formül/yük/stereo karşılaştır. Düzlemselliği sayısal, tetrahedral ve doğrusal açıları vektörlerle kontrol et.
 2. İlk karede atomlar/bağlar görünür ve alan içinde olsun; konsolu incele.
 3. Sürükleme sonrası en az bir projeksiyon değişsin, kaynak atomlar arası mesafeler sabit kalsın. Dört yön düğmesinin her biri doğru yönde döndürsün; Büyüt/Küçült ölçeği sınırlar içinde değiştirsin; Üstten/Yandan doğru kamera açısını seçsin; Başlangıç ilk kamera açısını ve zoom değerini geri getirsin.
-4. Tek parmak akışını ve varsa pinch'i emüle et. Parmak kalkınca kendi kendine dönmesin.
+4. “Sürükleme yönü” bölümündeki dört yön ve farklı kamera açısı kontrollerini uygula. Tek parmak akışını ve varsa pinch'i emüle et. Parmak kalkınca kendi kendine dönmesin.
 5. 320 px, tablet yatay ve geniş görünümde taşma/çakışmayı denetle. Açık/koyu temada okunabilirliği ve görünüm düğmelerinin üstte, diğerlerinin altta kaldığını kontrol et.
 6. Benzen yandan düzlemsel, siklohekzan kıvrımlı olsun. Stereomerleri döndürmek ayna dönüşümü yapmasın.
 
