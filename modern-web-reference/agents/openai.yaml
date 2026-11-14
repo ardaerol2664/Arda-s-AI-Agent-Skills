@@ -1,5 +1,5 @@
 interface:
-  display_name: Modern Web Rehberi
+  display_name: "Modern Web Rehberi (sınırlı)"
   short_description: Resmî kaynaklarla güncel HTML, CSS ve JavaScript
   default_prompt: $modern-web-reference ile bu web arayüzü için güncel tarayıcı özelliklerini
     ve uyumluluğu kontrol et.
