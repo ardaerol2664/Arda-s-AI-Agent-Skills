@@ -1,4 +1,0 @@
-interface:
-  display_name: "Modern Web Guidance"
-  short_description: "HTML, CSS ve JavaScript için modern web rehberliği"
-  default_prompt: "$modern-web-guidance ile bu web arayüzünü modern web uygulamalarına göre geliştir."
