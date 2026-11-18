@@ -1,27 +1,27 @@
 # Güncel durum
 
-2026-11-18: `codex-security` için işlevleri koruyan yeniden yazım hazırlandı. Karar yardımcısının 4.100 geçerli girdide eski sürümle çıktıları aynı; 44 bozuk girdi ve her sürümde 7 CLI kontrolü geçti. Sınırlı kör A/B denemesinde iki sürüm de dört hata adayını ayırdı ve 12 karar senaryosunda gereksinimleri korudu. Kaynak incelemesinde kayıp gereksinim bulunmadı. Bu sonuçlar üretim başarısı veya hukuki uygunluk garantisi değildir. Değişiklik seti `codex-security/rewrite-2026-11-18` dalında taslak PR üzerinden incelenmek içindir; main'e birleştirme yapılmadı. Sıradaki adım somut farkı ve test sınırlarını değerlendirmektir.
+2026-11-18: `codex-security` yeniden yazımı taslak PR #1 üzerinden inceleniyor. Kullanıcının talebiyle README, sonuç raporu ve PR açıklaması işlev ve doğrulama bilgilerine odaklandı. Çalışan talimatlar, Python yardımcısı ve karar kuralları bu belge düzenlemesinde değiştirilmedi. Sıradaki adım taslak değişikliği değerlendirmektir.
 
 ## Amaç ve kapsam
 
-Asıl depo, yeniden kullanılabilir AI ajan skill'lerini kök klasörlerde paylaşır: `ardaerol2664/Arda-s-AI-Agent-Skills`. Bu çalışma yalnız `codex-security/` ve ilgili bağlam/doğrulama kayıtlarını kapsar. `ders-konu-anlatimi/` ve `molekul-3b-modelle/` değiştirilmedi; bu yerel teslim paketine kopyalanmadı. Asıl deponun mevcut GPLv3 `LICENSE` dosyası aynen korundu.
-
-Kullanıcının temel kabul ölçütü güvenlik incelemesi/bağımsız doğrulama/patch işlevlerini ve etkinliği anlamlı ölçüde azaltmadan hukuki riski azaltacak düzenlemeler yapmaktır. Kullanıcı özgün üçüncü taraf aracın incelenmesini istemedi; yalnız sağladığı depodaki sürüm esas alındı.
+Depo yeniden kullanılabilir AI ajan skill'lerini kök klasörlerde paylaşır. Bu çalışma `codex-security/` ve ilgili doğrulama kayıtlarını kapsar; diğer skill'ler değiştirilmedi. Yerel teslim paketi yalnız ilgili dosyaları içerir. Kullanıcının temel ölçütü becerinin işlevlerini ve etkinliğini korumaktır; başka bir araçla birebir eşdeğerlik zorunlu değildir. README ve paylaşım belgeleri kullanım, işlev ve doğrulama bilgilerine odaklanmalıdır.
 
 ## Dosya haritası
 
-- `codex-security/SKILL.md`: keşif, yerel araçlar, yetki ve kanıt sınırları.
-- `codex-security/references/workflow.md`: araştırma, snapshot, doğrulama ve patch adımları.
-- `codex-security/references/contracts.md`: aynı kalan JSON arayüzü ve karar kuralları.
-- `codex-security/scripts/panel.py`: yeniden uygulanan standart kütüphane yardımcısı; Python 3.8+.
-- `codex-security/README.md`: kullanım ve kaynak/paylaşım sınırları.
-- `DEGISIKLIK_RAPORU.md`: tek sonuç kaydı; kaynaklar, değişiklikler, doğrulama ve sınırlar.
-- `tests/`: karşılaştırma aracı ve sınırlı davranış deneyinin kanıtları.
+- `codex-security/SKILL.md`: keşif, araçlar ve çalışma sınırları.
+- `codex-security/references/workflow.md`: inceleme, snapshot, doğrulama ve patch süreci.
+- `codex-security/references/contracts.md`: JSON arayüzü ve karar kuralları.
+- `codex-security/scripts/panel.py`: Python 3.8+ ve standart kütüphaneyle çalışan karar yardımcısı.
+- `codex-security/README.md`: kullanım ve özellikler.
+- `DEGISIKLIK_RAPORU.md`: değişiklik ve doğrulama sonuçları.
+- `tests/`: karşılaştırma araçları ve test kanıtları.
 
-## Kararlar ve güvenle devam etme
+## Kararlar ve doğrulama
 
-Temel alınan commit: `13974317b0d353fcafc9045f447842cb1bc1a297`. Üç ayrı doğrulayıcı, en az iki onay, önem derecesi üst sınırı, eksik işte kısmi durum, snapshot/redaksiyon şartları ve iki bağımsız patch incelemesi korunmuştur. Skill çağrısı, helper CLI ve JSON alanları uyumludur. Çalışma talimatları ve yardımcı uygulaması yeniden yazıldı; runtime akışına hukuki kontrol veya ek onay eklenmedi.
+Karşılaştırma tabanı: `13974317b0d353fcafc9045f447842cb1bc1a297`. Üç ayrı doğrulayıcı, en az iki onay, önem derecesi üst sınırı, eksik işte kısmi durum, snapshot/redaksiyon ve iki bağımsız patch incelemesi korundu. Çağrı adı, helper CLI ve JSON arayüzü uyumludur.
 
-Önceki sürüm görüldüğünden clean-room iddiası yoktur. Özgün kaynakla benzerlik, önceki materyalin izin zinciri, uygulanacak hukuk, sözleşme ve patent durumu doğrulanmadı. Yalnız parafrazın veya depodaki GPLv3 metninin bu konuları çözdüğü ileri sürülmemelidir. Önceki sürümün 16 kontrolü tarihsel kayıttır; yeni sürümün kanıtları rapordaki ayrı kontrollerdir.
+2026-11-18 kontrollerinde bizim eski/yeni sürümlerimiz 4.100 geçerli durumda aynı sonucu verdi; her sürüm 44 bozuk girdiyi reddetti ve 7 CLI kontrolünü geçti. Sınırlı A/B denemesinde iki sürüm de aynı dört adayı ayırdı ve 12 karar senaryosunda gereksinimlerle uyumluydu. Ayrı incelemede doğrulanmış regresyon bulunmadı. Bunlar tüm projelerde başarı garantisi değildir; ayrıntı ve ham kanıtlar sonuç raporundadır.
 
-Skill'ler bu deponun `.agents/skills/` konumuna kurulmaz; kullanıcı kendi kullanıcı/proje skill dizinine kopyalar. Yerelde kurulu `codex-security` bu çalışmada değiştirilmedi. Tam çok ajanlı gerçek proje taraması ve patch üretimi yeni sürümle uçtan uca çalıştırılmadı. Gereksiz yeniden test yerine yalnız yeni değişikliklerin etkilediği kontrolleri çalıştırın.
+Standart skill doğrulayıcısı PyYAML eksikliğiyle çalışmadı; ayrı paket/başvuru/sözdizimi kontrolleri geçti. Gerçek projede tam çok ajanlı tarama ve patch üretimi uçtan uca denenmedi. Belge değişikliği için geniş davranış testleri tekrar çalıştırılmamalı; ilgili içerik/bağlantı ve kodun değişmediği kontrolleri yeterlidir.
+
+Skill kullanıcı veya proje skill dizinine kopyalanabilir; bu koleksiyon deposunun `.agents/skills/` dizinine kurulmaz. Yerelde kurulu skill değiştirilmedi. Mevcut LICENSE korundu. PR taslaktır ve birleştirilmedi; bu düzenleme önceki Git commitlerini değiştirmez.

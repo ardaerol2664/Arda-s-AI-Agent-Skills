@@ -10,12 +10,6 @@ Klasörü kendi skill dizininize veya projenizde `.agents/skills/codex-security/
 
 Her aday için araştırmaya katılmamış üç ayrı doğrulayıcı gerekir. Üçü tamamlandığında en az iki onay bulguyu kabul ettirir. Eksik çalışma kısmi sonuç olarak gösterilir. Yardımcı program gerçek ajan kimliğini veya kanıtın doğruluğunu teyit edemez; bunları ana ajan kontrol eder. Patch önerisi hedefe otomatik uygulanmaz.
 
-## Kaynak ve paylaşım sınırı
-
-Bu paket başka bir sağlayıcının ürünü, resmi eklentisi veya onun çalıştırıldığına dair kayıt değildir; böyle bir bağlantı ya da onay iddia etmez. `codex-security` çağrısı ve mevcut JSON arayüzü kullanıcı uyumluluğu için korunmuştur.
-
-2026-11-18 düzenlemesinde bu deponun `13974317b0d353fcafc9045f447842cb1bc1a297` sürümündeki davranışlar temel alınarak talimatların düzeni ve anlatımı ile Python yardımcısının uygulaması yeniden yazıldı. Önceki sürüm görüldüğünden clean-room geliştirme iddiası yoktur. Kullanıcının isteğiyle üçüncü taraf özgün araç incelenmedi; önceki içeriğin kaynak/izin zinciri bu çalışmada doğrulanmış değildir. Yeniden yazım, ad değişikliği veya depo lisansı bu belirsizliği tek başına gidermez. Depodaki mevcut `LICENSE` korunur; üçüncü taraf hakları hakkında ek yetki iddia edilmez.
-
 ## Doğrulama
 
-Yeniden yazımın karşılaştırmalı kontrolleri ve sınırları depo kökündeki `DEGISIKLIK_RAPORU.md` dosyasında tutulur. Ajan talimatları ve yardımcı program için yapılan kontroller, bütün projelerde aynı tespit başarısını veya hukuki uygunluğu kanıtlamaz.
+Yeniden yazımın karşılaştırmalı kontrolleri ve sınırları depo kökündeki `DEGISIKLIK_RAPORU.md` dosyasında tutulur. Ajan talimatları ve yardımcı program için yapılan kontroller, bütün projelerde aynı tespit başarısını kanıtlamaz.

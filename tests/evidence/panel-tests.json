@@ -16,5 +16,5 @@
     "revised": 0.16395029999999977
   },
   "revised_over_baseline_time_ratio": 0.950161112720948,
-  "limits": "Synthetic helper equivalence; not an end-to-end multi-agent audit or legal conclusion."
+  "limits": "Synthetic helper equivalence; not an end-to-end multi-agent audit."
 }

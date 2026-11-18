@@ -1,6 +1,6 @@
 # Davranış sözleşmesi — 2026-11-18
 
-Kaynak: ardaerol2664/Arda-s-AI-Agent-Skills, 13974317b0d353fcafc9045f447842cb1bc1a297. Yalnız kullanıcının sağladığı sürüm incelendi; üçüncü taraf özgün uygulama kullanılmadı. Bu çalışma kaynak görüldükten sonra yapılan yeniden yazımdır; clean-room geliştirme iddiası yoktur.
+Karşılaştırma tabanı: ardaerol2664/Arda-s-AI-Agent-Skills, 13974317b0d353fcafc9045f447842cb1bc1a297.
 
 Korunacak davranışlar:
 

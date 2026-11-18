@@ -4,17 +4,9 @@ Tarih: 2026-11-18. Temel alınan sürüm: [ardaerol2664/Arda-s-AI-Agent-Skills, 
 
 ## Sonuç ve değişiklik
 
-Sağlanan depodaki beş skill dosyası yeniden yazıldı. Talimatlar yetki sınırı, kanıt, karar ve teslim koşulları etrafında düzenlendi; Python yardımcısı aynı davranış sözleşmesiyle yeniden uygulandı. Bu çalışma yalnız ad değiştirme veya eşanlamlı kelime yerleştirme değildir. Kullanıcının isteğiyle üçüncü taraf özgün araç aranmadı veya incelenmedi.
+Sağlanan depodaki beş skill dosyası yeniden yazıldı. Talimatlar yetki sınırı, kanıt, karar ve teslim koşulları etrafında düzenlendi; Python yardımcısı aynı davranış sözleşmesiyle yeniden uygulandı.
 
-Korunan çekirdek: kod tabanı/değişiklik/patch modları; salt okunur tarama; araştırmacı ve katkıcılarından bağımsız üç doğrulayıcı; üç oy tamamlandığında en az iki onay; önem derecesinin araştırmacı ve ikinci en yüksek onay derecesiyle sınırlandırılması; eksik işte kısmi sonuç; tam çalışma ağacı ve snapshot kontrolleri; sır redaksiyonu; ayrı scratch alanda patch üretimi, iki bağımsız patch incelemesi ve uygulanabilirlik kontrolü. Çağrı adı, CLI seçenekleri ve JSON alanları korundu. Hukuki açıklamalar çalışma akışına ek onay veya inceleme aşaması getirmedi.
-
-## Risk açısından ne yapıldı, ne doğrulanmadı?
-
-İfade/uygulama yeniden yazıldı; başka ürün çalışmış, onay vermiş veya paketle ilişkiliymiş gibi sunum engellendi; yeniden yazımın kaynağı ve sınırı kaydedildi. Mevcut GPLv3 `LICENSE` aynen korundu. Önceden alınmış içeriği yalnız lisans ekleyerek yetkilendirdiğimiz veya yasal kaynak zincirini doğruladığımız ileri sürülmedi.
-
-Dayanak, işlev ile işlevin ifade edilişini ayırmaktır: [WIPO](https://www.wipo.int/en/web/copyright/activities/software) ve [ABD Copyright Office Circular 61](https://www.copyright.gov/circs/circ61.pdf) bu ayrımı açıklar. Bu, belirli bir yeniden yazımın otomatik olarak uygun olduğu sonucu değildir. Mevcut sürüm incelendiğinden çalışma bir clean-room geliştirme olarak nitelenemez; yüzeysel parafraz veya isim değişikliğiyle hak sorunlarının giderildiği de söylenemez.
-
-[Anthropic Commercial Terms, D.4](https://www.anthropic.com/legal/commercial-terms) ve [Consumer Terms, bölüm 3](https://www.anthropic.com/legal/consumer-terms) hizmet kullanımıyla ilgili rekabet/tersine mühendislik kısıtları içerir. Bunların somut olaya uygulanması, hangi hizmetin nasıl ve hangi tarihte kullanıldığına ve geçerli hukuka bağlıdır; bu bilgiler doğrulanmadı. Kaynak/izin zinciri, korunabilir ifade benzerliği, sözleşme, gizlilik ve patent durumu incelenmedi. Yeniden yazım geçmiş kullanım veya yayınları değiştirmez. Bu çalışma teknik risk azaltma tedbirleridir; hukuki riskin ne kadar azaldığı ölçülmedi ve hukuki uygunluk onayı verilmedi. Kaynaklar 2026-11-18 tarihinde kontrol edildi.
+Korunan çekirdek: kod tabanı/değişiklik/patch modları; salt okunur tarama; araştırmacı ve katkıcılarından bağımsız üç doğrulayıcı; üç oy tamamlandığında en az iki onay; önem derecesinin araştırmacı ve ikinci en yüksek onay derecesiyle sınırlandırılması; eksik işte kısmi sonuç; tam çalışma ağacı ve snapshot kontrolleri; sır redaksiyonu; ayrı scratch alanda patch üretimi, iki bağımsız patch incelemesi ve uygulanabilirlik kontrolü. Çağrı adı, CLI seçenekleri ve JSON alanları korundu.
 
 ## Karşılaştırmalı davranış kontrolleri
 

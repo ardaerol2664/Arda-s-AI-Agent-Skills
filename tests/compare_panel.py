@@ -205,7 +205,7 @@ def run(baseline, revised):
             "benchmark_batch_cases": len(cases), "benchmark_repeats": 7,
             "median_batch_seconds": medians,
             "revised_over_baseline_time_ratio": medians["revised"] / medians["baseline"],
-            "limits": "Synthetic helper equivalence; not an end-to-end multi-agent audit or legal conclusion."}
+            "limits": "Synthetic helper equivalence; not an end-to-end multi-agent audit."}
 
 
 if __name__ == "__main__":
