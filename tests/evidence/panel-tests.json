@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "python": "3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]",
+  "exhaustive_valid_cases": 4096,
+  "additional_valid_cases": 4,
+  "invalid_cases_each": 44,
+  "cli_cases_each": {
+    "baseline": 7,
+    "revised": 7
+  },
+  "input_mutation_checks": 4096,
+  "benchmark_batch_cases": 4096,
+  "benchmark_repeats": 7,
+  "median_batch_seconds": {
+    "baseline": 0.1725500000000002,
+    "revised": 0.16395029999999977
+  },
+  "revised_over_baseline_time_ratio": 0.950161112720948,
+  "limits": "Synthetic helper equivalence; not an end-to-end multi-agent audit or legal conclusion."
+}
