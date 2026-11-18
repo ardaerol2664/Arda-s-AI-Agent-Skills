@@ -1,122 +1,155 @@
-"""Compute this independent Codex skill's panel outcomes; no host/tool execution."""
+"""Validate local review records and derive finding decisions without running agents."""
+
 import argparse
 import json
 from pathlib import Path, PurePosixPath
+
 
 SEVERITIES = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
 LENSES = {"reachability", "impact", "defenses"}
 VERDICTS = {"confirm", "reject", "uncertain", "predates_change"}
 
 
-def require(condition, message):
-    if not condition:
-        raise ValueError(message)
+def _check(ok, explanation):
+    if not ok:
+        raise ValueError(explanation)
 
 
-def nonempty(value):
+def _text(value):
     return isinstance(value, str) and bool(value.strip())
 
 
-def location(item):
-    path = item.get("path")
-    require(nonempty(path), "missing evidence path")
-    p = PurePosixPath(path)
-    require(not p.is_absolute() and ".." not in p.parts and "\\" not in path
-            and ":" not in path and p.parts and path != ".", "unsafe relative path")
-    line = item.get("line")
-    require(type(line) is int and line > 0, "line must be a positive integer")
+def _source(record):
+    path = record.get("path")
+    _check(_text(path), "a source path is required")
+    parts = PurePosixPath(path)
+    _check(parts.parts and not parts.is_absolute() and ".." not in parts.parts
+           and "\\" not in path and ":" not in path and path != ".",
+           "source path must stay relative to the repository")
+    number = record.get("line")
+    _check(type(number) is int and number >= 1, "source line must be a positive integer")
 
 
-def evidence(value):
-    require(isinstance(value, list) and value, "evidence required")
-    for item in value:
-        require(isinstance(item, dict), "evidence must contain objects")
-        location(item)
-        require(nonempty(item.get("reason")), "evidence reason required")
+def _citations(items):
+    _check(isinstance(items, list) and bool(items), "provide at least one source reference")
+    for citation in items:
+        _check(isinstance(citation, dict), "each source reference must be an object")
+        _source(citation)
+        _check(_text(citation.get("reason")), "explain each source reference")
+
+
+def _candidate_table(records):
+    table = {}
+    for record in records:
+        _check(isinstance(record, dict), "each candidate must be an object")
+        identity = record.get("id")
+        _check(_text(identity) and identity not in table, "candidate identifiers must be unique and nonblank")
+        for field in ("researcher_id", "title", "attack_path"):
+            _check(_text(record.get(field)), "missing candidate field: " + field)
+        _source(record)
+        _citations(record.get("evidence"))
+        _check(record.get("severity") in SEVERITIES, "unsupported candidate severity")
+        contributors = record.get("contributor_ids", [])
+        _check(isinstance(contributors, list) and all(_text(item) for item in contributors),
+               "contributor_ids must contain nonblank identities")
+        table[identity] = record
+    return table
+
+
+def _review_table(records, candidates):
+    grouped = {identity: {} for identity in candidates}
+    for record in records:
+        _check(isinstance(record, dict), "each decision must be an object")
+        identity = record.get("candidate_id")
+        _check(identity in candidates, "decision has no matching candidate")
+        reviewer = record.get("agent_id")
+        _check(_text(reviewer), "decision needs a reviewer identity")
+        finding = candidates[identity]
+        excluded = [finding["researcher_id"]] + finding.get("contributor_ids", [])
+        _check(reviewer not in excluded, "a contributing researcher cannot review this candidate")
+        focus = record.get("lens")
+        _check(focus in LENSES, "unsupported review lens")
+        _check(record.get("verdict") in VERDICTS, "unsupported review verdict")
+        assigned = grouped[identity]
+        _check(focus not in assigned, "a lens cannot have two decisions")
+        _check(all(previous["agent_id"] != reviewer for previous in assigned.values()),
+               "a reviewer cannot occupy two seats")
+        _citations(record.get("evidence"))
+        if record["verdict"] == "confirm":
+            _check(record.get("severity") in SEVERITIES, "confirmation needs a supported severity")
+        assigned[focus] = record
+    return grouped
+
+
+def _outcome(identity, finding, decisions):
+    confirmations = [item for item in decisions.values() if item["verdict"] == "confirm"]
+    status = "unverified"
+    level = None
+    if len(decisions) == len(LENSES):
+        if len(confirmations) >= 2:
+            status = "confirmed"
+            accepted_levels = sorted((SEVERITIES.index(item["severity"]) for item in confirmations),
+                                     reverse=True)
+            level = SEVERITIES[min(SEVERITIES.index(finding["severity"]), accepted_levels[1])]
+        elif sum(item["verdict"] in ("reject", "predates_change")
+                 for item in decisions.values()) >= 2:
+            status = "rejected"
+    return {
+        "candidate_id": identity,
+        "state": status,
+        "severity": level,
+        "confirmations": len(confirmations),
+        "completed_verifiers": len(decisions),
+        "missing_lenses": sorted(LENSES.difference(decisions)),
+    }
 
 
 def tally(data):
-    require(isinstance(data, dict), "input must be an object")
-    require(nonempty(data.get("run_id")), "run_id required")
-    require(type(data.get("research_complete")) is bool, "research_complete must be boolean")
-    candidates, votes = data.get("candidates"), data.get("votes")
-    require(isinstance(candidates, list) and isinstance(votes, list), "candidates/votes must be arrays")
-    indexed = {}
-    for candidate in candidates:
-        require(isinstance(candidate, dict), "candidate must be an object")
-        cid = candidate.get("id")
-        require(nonempty(cid) and cid not in indexed, "missing/duplicate candidate id")
-        location(candidate)
-        for field in ("title", "researcher_id", "attack_path"):
-            require(nonempty(candidate.get(field)), "candidate missing " + field)
-        require(candidate.get("severity") in SEVERITIES, "invalid candidate severity")
-        contributors = candidate.get("contributor_ids", [])
-        require(isinstance(contributors, list) and all(nonempty(x) for x in contributors),
-                "invalid contributor ids")
-        evidence(candidate.get("evidence"))
-        indexed[cid] = candidate
-    panels = {cid: [] for cid in indexed}
-    for vote in votes:
-        require(isinstance(vote, dict), "vote must be an object")
-        cid = vote.get("candidate_id")
-        require(cid in indexed, "vote references unknown candidate")
-        require(nonempty(vote.get("agent_id")), "vote agent id required")
-        candidate = indexed[cid]
-        require(vote["agent_id"] not in [candidate["researcher_id"]] + candidate.get("contributor_ids", []),
-                "researcher cannot verify own candidate")
-        require(vote.get("lens") in LENSES, "invalid lens")
-        require(vote.get("verdict") in VERDICTS, "invalid verdict")
-        for other in panels[cid]:
-            require(other["agent_id"] != vote["agent_id"], "duplicate verifier")
-            require(other["lens"] != vote["lens"], "duplicate lens")
-        evidence(vote.get("evidence"))
-        if vote["verdict"] == "confirm":
-            require(vote.get("severity") in SEVERITIES, "confirm requires severity")
-        panels[cid].append(vote)
-    outcomes = []
-    for cid, candidate in indexed.items():
-        panel = panels[cid]
-        confirming = [v for v in panel if v["verdict"] == "confirm"]
-        rejecting = [v for v in panel if v["verdict"] in {"reject", "predates_change"}]
-        state, severity = "unverified", None
-        if len(panel) == 3:
-            if len(confirming) >= 2:
-                state = "confirmed"
-                supported = sorted((SEVERITIES.index(v["severity"]) for v in confirming), reverse=True)[1]
-                severity = SEVERITIES[min(SEVERITIES.index(candidate["severity"]), supported)]
-            elif len(rejecting) >= 2:
-                state = "rejected"
-        outcomes.append({"candidate_id": cid, "state": state, "severity": severity,
-                         "confirmations": len(confirming), "completed_verifiers": len(panel),
-                         "missing_lenses": sorted(LENSES - {v["lens"] for v in panel})})
-    return {"adapter": "codex-security-independent-v1", "run_id": data["run_id"],
-            "complete": data["research_complete"] and all(o["state"] != "unverified" for o in outcomes),
-            "research_complete": data["research_complete"], "outcomes": outcomes}
+    """Return the v1 result object; malformed records raise a validation error."""
+    _check(isinstance(data, dict), "the decision input must be an object")
+    _check(_text(data.get("run_id")), "supply this audit's run_id")
+    finished = data.get("research_complete")
+    _check(type(finished) is bool, "research_complete must be boolean")
+    records, decisions = data.get("candidates"), data.get("votes")
+    _check(isinstance(records, list) and isinstance(decisions, list), "candidates and votes must be arrays")
+    candidates = _candidate_table(records)
+    reviews = _review_table(decisions, candidates)
+    outcomes = [_outcome(identity, finding, reviews[identity])
+                for identity, finding in candidates.items()]
+    return {
+        "adapter": "codex-security-independent-v1",
+        "run_id": data["run_id"],
+        "complete": finished and all(item["state"] != "unverified" for item in outcomes),
+        "research_complete": finished,
+        "outcomes": outcomes,
+    }
 
 
 def unique_object(pairs):
+    """JSON loader hook that refuses ambiguous repeated object keys."""
     result = {}
     for key, value in pairs:
-        require(key not in result, "duplicate JSON key: " + key)
+        _check(key not in result, "repeated JSON member: " + key)
         result[key] = value
     return result
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", required=True, type=Path)
-    parser.add_argument("--output", required=True, type=Path)
-    args = parser.parse_args()
+    command = argparse.ArgumentParser(description=__doc__)
+    command.add_argument("--input", type=Path, required=True)
+    command.add_argument("--output", type=Path, required=True)
+    paths = command.parse_args()
     try:
-        require(args.input.resolve() != args.output.resolve(), "input cannot be output")
-        data = json.loads(args.input.read_text(encoding="utf-8"), object_pairs_hook=unique_object)
-        result = tally(data)
-        # Exclusive creation prevents overwriting earlier evidence or a symlink target.
-        with args.output.open("x", encoding="utf-8") as handle:
-            json.dump(result, handle, indent=2, ensure_ascii=False)
-            handle.write("\n")
-    except (ValueError, OSError, TypeError) as exc:
-        parser.exit(2, "panel validation failed: " + str(exc) + "\n")
+        _check(paths.input.resolve() != paths.output.resolve(), "choose different input and output paths")
+        with paths.input.open(encoding="utf-8") as source:
+            request = json.load(source, object_pairs_hook=unique_object)
+        decision = tally(request)
+        # An existing output (including a symlink) must never be replaced.
+        with paths.output.open("x", encoding="utf-8") as destination:
+            json.dump(decision, destination, ensure_ascii=False, indent=2)
+            destination.write("\n")
+    except (ValueError, OSError, TypeError) as problem:
+        command.exit(2, "panel validation failed: " + str(problem) + "\n")
 
 
 if __name__ == "__main__":

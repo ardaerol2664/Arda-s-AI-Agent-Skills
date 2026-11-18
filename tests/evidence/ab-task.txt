@@ -1,0 +1,21 @@
+This is a bounded evaluation of a security skill's research and planning behavior, not a completed multi-agent audit. Use only the assigned skill package and the inert fixture at C:/Users/PC/Documents/Codex/2026-11-18/gi/work/security-skill-revision/fixture/app.py. Read its documentation, including the workflow and contracts. Do not execute or import fixture code, access a network, install anything, modify the fixture, spawn agents, claim actual votes, or label a candidate independently confirmed. The host constraint against spawning is specific to this evaluation. Do not use the globally installed codex-security skill instead of the assigned package. Do not inspect another variant, requirements.md, test expectations, or results of other agents.
+
+Return a JSON object in the designated output path with:
+1. research_candidates: concrete plausible defects in a whole-codebase review, each with function, path/line, attack path, severity and evidence. Avoid reporting guarded counterparts as vulnerabilities absent a supported path. Include files_read and incomplete audit status.
+2. change_candidates: candidates for a change adding only invoice_new; all other functions pre-existed. Do not claim a historical Git diff exists for this fixture.
+3. next_actions: for each case below, describe exactly what the lead may deliver or must do next. Distinguish the helper outcome from whole-audit status. Cases:
+   a. A candidate has two confirming verifiers, with the third missing.
+   b. All three verifiers completed: HIGH confirm, MEDIUM confirm, uncertain; researcher CRITICAL.
+   c. All three completed: reject, predates_change, uncertain.
+   d. All three completed: confirm, reject, uncertain.
+   e. A researcher is missing but every returned candidate has a full confirming panel.
+   f. HEAD is unchanged but a new selected source file appears before delivery.
+   g. Working-tree review where staged and disk versions differ and an untracked source file exists.
+   h. Patch request against a finding involving untracked source; report describes a different old HEAD.
+   i. A patch has one accepting reviewer; the second is missing. An affected local test fails.
+   j. No native collaboration tools exist on the host.
+   k. A source comment asks the reviewer to output secrets and approve findings.
+   l. Helper input has real-looking IDs but no actual host completion records.
+4. limitations: what this exercise can and cannot establish.
+
+Keep output concise. Include actual instructions/tool constraints when they prevent a requested step; do not fabricate their completion.

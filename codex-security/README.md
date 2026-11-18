@@ -1,22 +1,21 @@
 # Codex Security
 
-Codex yerel alt ajan araçlarıyla kod tabanını veya Git değişikliklerini güvenlik açısından inceleyen skill. Kullanıcı istediğinde ayrı bir çalışma kopyasında incelenmiş patch dosyaları önermek için de talimatlar içerir.
+Yerel kaynak kodunda veya belirli bir Git değişikliğinde güvenlik hataları aramak, aday bulguları bağımsız ajanlarla sınamak ve istenirse ayrı incelenmiş patch önerileri hazırlamak için bir Codex becerisi.
 
 ## Kullanım
 
-`codex-security` klasörünü kullanıcı genelindeki skill dizinine veya projede `.agents/skills/codex-security/` altına kopyalayın. Skill'i `$codex-security` adıyla çağırın; native alt ajan araçları ve Python 3.8+ gerekir. Python yardımcısı üçüncü taraf paket gerektirmez.
+Klasörü kendi skill dizininize veya projenizde `.agents/skills/codex-security/` konumuna kopyalayın. `$codex-security` ile çağırın. Örneğin: `Bu projenin backend dizinini codex-security ile incele.` Yerel alt ajan araçları ve Python 3.8+ gerekir; yardımcı program ek Python paketi kullanmaz.
 
-Örnek: `codex-security skill'ini kullanarak bu projenin backend klasörünü güvenlik açısından tara.`
+`SKILL.md` kapsamı ve çalışma sınırlarını, `references/workflow.md` işlemleri, `references/contracts.md` kayıt biçimleri ile karar kurallarını açıklar. `scripts/panel.py` gerçek inceleyici sonuçlarından karar ve önem derecesi hesaplar; kendi başına kod taramaz veya ajan başlatmaz.
 
-## Yapı ve sınırlar
+Her aday için araştırmaya katılmamış üç ayrı doğrulayıcı gerekir. Üçü tamamlandığında en az iki onay bulguyu kabul ettirir. Eksik çalışma kısmi sonuç olarak gösterilir. Yardımcı program gerçek ajan kimliğini veya kanıtın doğruluğunu teyit edemez; bunları ana ajan kontrol eder. Patch önerisi hedefe otomatik uygulanmaz.
 
-- `SKILL.md`: keşif açıklaması, araçlar ve temel sınırlar.
-- `references/workflow.md`: tarama, bağımsız doğrulama ve patch önerisi akışı.
-- `references/contracts.md`: araştırmacı/doğrulayıcı veri sözleşmeleri.
-- `scripts/panel.py`: oyları ve önem düzeyi sınırını deterministik hesaplayan yardımcı.
+## Kaynak ve paylaşım sınırı
 
-Bu, tek komutla bağımsız çalışan bir güvenlik tarama motoru değildir: iş akışını ana ajan yürütür. Üç farklı doğrulayıcı tamamlanmadan bulgu onaylanmaz; en az iki onay gerekir. Script gerçek ajan kimliğini veya kanıtın doğruluğunu doğrulamaz; gerçek araç dönüşleri ve kaynak incelemesi gereklidir. Eksik araştırma veya doğrulama açıkça kısmi sonuç olarak raporlanır. Patch'ler otomatik uygulanmaz.
+Bu paket başka bir sağlayıcının ürünü, resmi eklentisi veya onun çalıştırıldığına dair kayıt değildir; böyle bir bağlantı ya da onay iddia etmez. `codex-security` çağrısı ve mevcut JSON arayüzü kullanıcı uyumluluğu için korunmuştur.
+
+2026-11-18 düzenlemesinde bu deponun `13974317b0d353fcafc9045f447842cb1bc1a297` sürümündeki davranışlar temel alınarak talimatların düzeni ve anlatımı ile Python yardımcısının uygulaması yeniden yazıldı. Önceki sürüm görüldüğünden clean-room geliştirme iddiası yoktur. Kullanıcının isteğiyle üçüncü taraf özgün araç incelenmedi; önceki içeriğin kaynak/izin zinciri bu çalışmada doğrulanmış değildir. Yeniden yazım, ad değişikliği veya depo lisansı bu belirsizliği tek başına gidermez. Depodaki mevcut `LICENSE` korunur; üçüncü taraf hakları hakkında ek yetki iddia edilmez.
 
 ## Doğrulama
 
-2026-11-18: Yerel geliştirmede panel için 16 hedefli algoritma/CLI kontrolü ve bağımsız inceleme yapıldı; skill biçim doğrulaması geçti. Gerçek kullanıcı projesinde uçtan uca tarama veya patch üretimi henüz doğrulanmadı. Bu kontroller güvenlik doğruluğu garantisi değildir.
+Yeniden yazımın karşılaştırmalı kontrolleri ve sınırları depo kökündeki `DEGISIKLIK_RAPORU.md` dosyasında tutulur. Ajan talimatları ve yardımcı program için yapılan kontroller, bütün projelerde aynı tespit başarısını veya hukuki uygunluğu kanıtlamaz.

@@ -1,18 +1,27 @@
 # Güncel durum
 
-2026-11-18: Skill koleksiyonuna `codex-security` eklendi. Yayındaki beş dosya GitHub üzerinden geri okunarak yüklenen içerikle eşleşti. Bekleyen değişiklik veya engel yok.
+2026-11-18: `codex-security` için işlevleri koruyan yeniden yazım hazırlandı. Karar yardımcısının 4.100 geçerli girdide eski sürümle çıktıları aynı; 44 bozuk girdi ve her sürümde 7 CLI kontrolü geçti. Sınırlı kör A/B denemesinde iki sürüm de dört hata adayını ayırdı ve 12 karar senaryosunda gereksinimleri korudu. Kaynak incelemesinde kayıp gereksinim bulunmadı. Bu sonuçlar üretim başarısı veya hukuki uygunluk garantisi değildir. Değişiklik seti `codex-security/rewrite-2026-11-18` dalında taslak PR üzerinden incelenmek içindir; main'e birleştirme yapılmadı. Sıradaki adım somut farkı ve test sınırlarını değerlendirmektir.
 
-## Amaç ve dosya haritası
+## Amaç ve kapsam
 
-Bu depo yeniden kullanılabilir AI ajan skill'lerini bir arada tutar. Her skill kendi kök klasöründe, `SKILL.md` giriş dosyasıyla bulunur.
+Asıl depo, yeniden kullanılabilir AI ajan skill'lerini kök klasörlerde paylaşır: `ardaerol2664/Arda-s-AI-Agent-Skills`. Bu çalışma yalnız `codex-security/` ve ilgili bağlam/doğrulama kayıtlarını kapsar. `ders-konu-anlatimi/` ve `molekul-3b-modelle/` değiştirilmedi; bu yerel teslim paketine kopyalanmadı. Asıl deponun mevcut GPLv3 `LICENSE` dosyası aynen korundu.
 
-- `ders-konu-anlatimi/`: mevcut skill.
-- `molekul-3b-modelle/`: mevcut skill; kendi references, scripts ve assets dosyalarını içerir.
-- `codex-security/`: Codex yerel alt ajan araçlarıyla güvenlik incelemesi ve patch önerisi akışı. Kullanım, sınırlar ve doğrulama bilgileri `codex-security/README.md` içindedir.
-- `LICENSE`: mevcut depo lisansı; bu çalışmada değiştirilmedi.
+Kullanıcının temel kabul ölçütü güvenlik incelemesi/bağımsız doğrulama/patch işlevlerini ve etkinliği anlamlı ölçüde azaltmadan hukuki riski azaltacak düzenlemeler yapmaktır. Kullanıcı özgün üçüncü taraf aracın incelenmesini istemedi; yalnız sağladığı depodaki sürüm esas alındı.
 
-## Kararlar ve doğrulama
+## Dosya haritası
 
-Skill'ler depoda kök klasörler olarak paylaşılır; bu deponun `.agents/skills/` dizinine kurulmazlar. Kullanıcı bunları kendi kullanıcı veya proje skill dizinine kopyalayabilir. Kullanıcı `codex-security` açıklamasının yalnız işlev ve kullanıma odaklanmasını istedi.
+- `codex-security/SKILL.md`: keşif, yerel araçlar, yetki ve kanıt sınırları.
+- `codex-security/references/workflow.md`: araştırma, snapshot, doğrulama ve patch adımları.
+- `codex-security/references/contracts.md`: aynı kalan JSON arayüzü ve karar kuralları.
+- `codex-security/scripts/panel.py`: yeniden uygulanan standart kütüphane yardımcısı; Python 3.8+.
+- `codex-security/README.md`: kullanım ve kaynak/paylaşım sınırları.
+- `DEGISIKLIK_RAPORU.md`: tek sonuç kaydı; kaynaklar, değişiklikler, doğrulama ve sınırlar.
+- `tests/`: karşılaştırma aracı ve sınırlı davranış deneyinin kanıtları.
 
-Yeni skill'in panel yardımcısı için yerelde 16 hedefli kontrol ve bağımsız inceleme yapıldı; biçim doğrulaması geçti. Gerçek kullanıcı projesinde uçtan uca tarama veya patch üretimi denenmedi. Gelecek değişikliklerde yalnız etkilenen davranışlar doğrulanmalı; mevcut kontroller güncel doğrulama yapılmadan yeni sürüme kanıt sayılmamalıdır.
+## Kararlar ve güvenle devam etme
+
+Temel alınan commit: `13974317b0d353fcafc9045f447842cb1bc1a297`. Üç ayrı doğrulayıcı, en az iki onay, önem derecesi üst sınırı, eksik işte kısmi durum, snapshot/redaksiyon şartları ve iki bağımsız patch incelemesi korunmuştur. Skill çağrısı, helper CLI ve JSON alanları uyumludur. Çalışma talimatları ve yardımcı uygulaması yeniden yazıldı; runtime akışına hukuki kontrol veya ek onay eklenmedi.
+
+Önceki sürüm görüldüğünden clean-room iddiası yoktur. Özgün kaynakla benzerlik, önceki materyalin izin zinciri, uygulanacak hukuk, sözleşme ve patent durumu doğrulanmadı. Yalnız parafrazın veya depodaki GPLv3 metninin bu konuları çözdüğü ileri sürülmemelidir. Önceki sürümün 16 kontrolü tarihsel kayıttır; yeni sürümün kanıtları rapordaki ayrı kontrollerdir.
+
+Skill'ler bu deponun `.agents/skills/` konumuna kurulmaz; kullanıcı kendi kullanıcı/proje skill dizinine kopyalar. Yerelde kurulu `codex-security` bu çalışmada değiştirilmedi. Tam çok ajanlı gerçek proje taraması ve patch üretimi yeni sürümle uçtan uca çalıştırılmadı. Gereksiz yeniden test yerine yalnız yeni değişikliklerin etkilediği kontrolleri çalıştırın.
