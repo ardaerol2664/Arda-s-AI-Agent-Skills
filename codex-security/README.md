@@ -4,7 +4,7 @@ Codex yerel alt ajan araçlarıyla kod tabanını veya Git değişikliklerini g�
 
 ## Kullanım
 
-`codex-security` klasörünü kullanıcı genelindeki skill dizinine veya projede `.agents/skills/codex-security/` altına kopyalayın. Skill'i `@codex-security` adıyla çağırın; native alt ajan araçları ve Python 3.8+ gerekir. Python yardımcısı üçüncü taraf paket gerektirmez.
+`codex-security` klasörünü kullanıcı genelindeki skill dizinine veya projede `.agents/skills/codex-security/` altına kopyalayın. Skill'i `$codex-security` adıyla çağırın; native alt ajan araçları ve Python 3.8+ gerekir. Python yardımcısı üçüncü taraf paket gerektirmez.
 
 Örnek: `codex-security skill'ini kullanarak bu projenin backend klasörünü güvenlik açısından tara.`
 
