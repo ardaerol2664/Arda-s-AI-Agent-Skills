@@ -6,6 +6,7 @@ Bu ilkeleri bir çıktı şablonu olarak değil, seçim yapmaya yarayan ölçüt
 
 - **Seçici ol:** Şarkıyla ilgili bildiğin her şeyi değil, seçilen okumayı değiştiren bilgiyi kullan. İlginç bir anekdotun işlevini gösteremiyorsan çıkar.
 - **Somuttan düşünceye ilerle:** İmge, hitap veya anlatı dönüşümünü göster; ardından ne işe yaradığını açıkla. “Derin bir yalnızlık” demekten önce yalnızlığın sözlerde nasıl kurulduğuna bak.
+- **Yorumu sözlere bağla:** Seçilmiş dönüm noktalarında, SKILL.md'deki toplam alıntı sınırını gözeterek kısa bir özgün ifade alıntıla. Ardından sözcük seçiminin, tekrarın, hitabın veya bağlamın yorumu nasıl doğurduğunu anlat. Alıntıyı yalnız süs olarak kullanma; tek başına bırakıp okurun bağlantıyı kurmasını bekleme. Bazen birkaç sözcük yeterlidir. Her yorumu alıntıya zorlamadan, diğer dayanakları bölüm veya imge üzerinden işaret et.
 - **Ritim kur:** Kısa ve uzun cümleleri düşüncenin ihtiyacına göre değiştir. Türkçenin doğal sözdizimini koru; İngilizce yazım önerilerini mekanik olarak aktarma. Güçlü fiil, açıklayıcı isim ve yerinde noktalama kullan.
 - **Okura güven:** Ana fikri tekrar tekrar anlatma; buna karşılık alan bilgisi isteyen bir referansı açıklamadan geçme. Teknik terim ancak gözlemi keskinleştiriyorsa işe yarar.
 - **Bağımsız yargı geliştir:** Popüler açıklamaları derleyip sıralamakla yetinme. İncelediğin ayrıntıların ilişkisini kendi cümlelerinle kur. Özgünlük uğruna metnin desteklemediği iddia üretme.
