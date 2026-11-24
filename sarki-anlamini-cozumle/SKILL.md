@@ -14,7 +14,7 @@ Meraklı, dikkatli, bağımsız düşünen bir müzik yazarı gibi davran. İyi 
 ## Başlangıç kararları
 
 - Şarkıyı, sanatçıyı ve incelenen sürümü belirle. Cover, yeniden kayıt, canlı yorum veya aynı adlı eserler anlamlı fark yaratıyorsa ayır. Belirsizlik araştırmayla çözülemiyorsa yalnız gerekli bilgiyi sor.
-- Kullanıcı başka bir dil veya kapsam istemedikçe Türkçe yaz. Varsayılan olarak orta kapsamda yaz. Uzunluğu kullanıcının isteğine, şarkının sunduğu ayrıntılara ve anlamı etkileyen bağlama göre belirle. Her yeni paragraf bir gözlem, bağlam veya yorum eklesin.
+- Kullanıcı başka bir dil veya kapsam istemedikçe Türkçe yaz. Orta kapsam için çoğunlukla 650–1000 sözcüğü hedefle; bu bir kota değildir. Malzeme azsa daha kısa yaz, kaynak yoksunluğunu yorum tekrarıyla doldurma. Talep edilen kapsamı önceliklendir.
 - Araştırma araçlarını keşfet. Varsayılan web araması, Exa veya Parallel arasında mevcut imkân ve göreve göre seçim yap; hepsini çalıştırmayı zorunlu tutma. Kaynak metnini açabilen aracı kullan. Açık araştırma isteğinde web araştırması yap; kullanıcı yasaklamışsa yalnız sağladığı malzemeyle çalış ve sınırı belirt.
 - Kullanıcının açık tercihlerini uygula. Geçmiş konuşmalara ancak kullanıcı istediğinde veya eksik bir tercih sonucu gerçekten değiştirecekse başvur; her şarkıda kişisel geçmişi tarama.
 
@@ -40,28 +40,24 @@ Metindeki anlatıcıyı, söz yazarını, yorumcuyu ve klipteki karakteri özde�
 
 Anlamı taşıyan birkaç ayrıntı seç ve aralarındaki ilişkiyi geliştir. Aşağıdakileri zorunlu bölüm listesi olarak kullanma:
 
-- Hitabın kime yöneldiğini, söylenenle saklanan arasındaki mesafeyi ve anlatıcının değişimini incele. Sözlerin kişilerin kimliği, olayların zamanı, nedenleri ve sonuçları konusunda neyi açık bıraktığını gözet. Bir dilekten ters yönde bir niyet, bir koşul cümlesinden yaşanmış bir olay, ardışık dizelerden kesin bir kronoloji çıkarma. Bu belirsizlik okumayı etkiliyorsa ayrıntının dinleyiciye bırakıldığını belirt. Belirli bir olasılığı ele alıyorsan onu yorum olarak sun.
+- Kimin kime seslendiğini, söylenenle saklanan arasındaki mesafeyi, anlatıcının değişimini incele.
 - Tekrarlanan sözcük, imge, zaman kipi, zamir, sessizlik veya nakaratın bağlam içinde nasıl anlam değiştirdiğine bak.
 - Tarihsel, edebî, dinî, mitolojik veya gündelik kültür referanslarının anlamı nasıl değiştirdiğini açıkla. Doğrulanmış gönderme ile kendi kurduğun benzerliği ayır. Her imgede gizli bir şifre arama.
 - Albüm içindeki konum, tür geleneği, üretim koşulları veya dönemin toplumsal bağlamını ancak okumanın bir noktasını aydınlatıyorsa ekle. Sanatçı biyografisini amaçsızca uzatma.
 - İşitsel malzemeye erişebildiysen söz–müzik ilişkisini kullan: neşeli düzenleme ile karanlık söz, sesin kırıldığı yer, beklenmedik duraklama gibi. Kaydı dinlemediysen dinlemiş gibi yazma; teknik iddiaları güvenilir bir kaynağa dayandır veya dışarıda bırak. Klip ve kayıt gözlemlerini ayrı tut.
 - Yabancı dilde deyim, argo, kültürel çağrışım veya sözcük oyununu gerektiğinde özgün dille kontrol et. Çeviri tercihinin yorumu değiştirdiği yeri açıkla.
 
-Yorumun kesin ispatlanmasını veya sanatçı tarafından onaylanmasını şart koşma. Dayanağı görülebilen, bağlamla çelişmeyen, şarkının ayrıntılarını birbirine bağlayan bir okuma yeterlidir. İlk okumayı zorlayan bir dize, soru, ton değişimi veya söz ile davranış arasındaki uyumsuzluğu ara. Ayrıntı ana yorumu değiştiriyorsa yazının akışına kat. Aynı ifade iki duyguyu veya tutumu birlikte taşıyabiliyorsa bunun nasıl mümkün olduğunu göster ve metnin açık bıraktığı gerilimi koru.
+Yorumun kesin ispatlanmasını veya sanatçı tarafından onaylanmasını şart koşma. Dayanağı görülebilen, bağlamla çelişmeyen, şarkının ayrıntılarını birbirine bağlayan bir okuma yeterlidir. Buna karşıt bir ayrıntı varsa görmezden gelme; yorumunu daralt veya zenginleştir. İkinci okuma ancak anlamlı bir fark getiriyorsa ekle; her ihtimali eşit ağırlıkta sıralama.
 
 Yorum alanına geçerken “buradan bakınca”, “bu imgeyi … olarak okumak mümkün” gibi doğal işaretler kullan. Geçiş kurulduktan sonra her cümleyi “belki/muhtemelen” ile zayıflatma. Kesinlik derecesini, anlatımın akıcılığını koruyarak yönet.
 
-Yazı boyunca arada şarkı sözlerinden kısa, birebir alıntılara yer ver. Alıntıları metnin duygusuna ve akışına uygun noktalarda doğal biçimde kullan; her alıntının ardından yorumun o ifadeden nasıl çıkarıldığını açıklamayı zorunlu tutma. Alıntılar şarkının sesini yazıya taşıyabilir veya ilgili bölümü hatırlatabilir. Sabit bir sayı ya da her paragrafta alıntı şartı koyma. Alıntının özgün bağlamını koru ve tüm alıntıları aşağıdaki toplam kullanım sınırı içinde planla. Yabancı dilde özgün ifadeyi koru; gerekiyorsa anlamını kısaca açıkla ve kendi çevirini sanatçının özgün sözü gibi sunma.
-
-Bir paragrafı bir söz alıntısından yola çıkarak kuruyorsan, o sözden hemen önce ve sonra söylenenleri birlikte oku ve yoruma yansıt. Yakın dizeler anlamı değiştiriyor, sınırlandırıyor veya tersine çeviriyorsa paragrafı buna göre kur. Gerekirse kıtanın ya da nakaratın bütününe ve şarkının ilerleyişine bak. Aynı ifade yeniden geçiyorsa, arada söylenenlerin ikinci kullanımın anlamını veya işlevini değiştirip değiştirmediğini değerlendir. Bu fark yorumu etkiliyorsa yazıya yansıt. Çevredeki dizeleri de alıntılamak veya yorumun nasıl oluştuğunu adım adım açıklamak gerekmez.
-
 ## Yazıyı kurma
 
-Taslağı yazmadan [Yazı işçiliği](references/yazi-isciligi.md) rehberini oku. Araştırma tamamlandıktan sonra bir ayrıntının başka bir ayrıntıyı nasıl değiştirdiğini bul. Yazının odağını bu ilişki belirlesin. Okuma metnini paragraflar ilerledikçe gelişen bir düşünceyle kur. Kıta sırasını ancak şarkıdaki bir dönüşümü açıklamaya yarıyorsa izle.
+Taslağı yazmadan [Yazı işçiliği](references/yazi-isciligi.md) rehberini oku. Araştırma tamamlandıktan sonra şarkıya özgü bir odak seç: bir çelişki, değişen hitap, küçük bir nesne, açıklanmayan bir sahne, kamusal hikâyeyle özel ses arasındaki gerilim olabilir. Metnin biçimini bu odağa göre tasarla.
 
 İlk paragrafta somut ve karşılığı verilecek bir merak aç. Dinleyiciye ne hissettiğini söyleme; uydurma sahneyle ilgi çekmeye çalışma. Başlangıçtaki soruyu veya ayrıntıyı yazının ilerleyişinde geliştir. Yalnız girişe değil, metnin uygun yerlerine yeni gözlem ve anlam dönüşleri yerleştir.
 
-Bilgi ile yorumu okunabilir bir bütün içinde birleştir; zorunlu “Bilgi / Yorum” blokları oluşturma. İddianın türü dilinden ve atfından anlaşılmalı. Her paragraf önceki düşünceyi yeni bir ayrıntıyla ilerletsin, sınasın veya başka yöne çevirsin. Paragraflar serbestçe yer değiştirebiliyorsa bağlantıları yeniden kur. Kullanıcı okuma metni istediğinde deneme akışını varsay ve ara başlıkları metinde gerçek bir dönüşü belirginleştirdiklerinde kullan. Aynı başlıkları, aynı açılışı ve aynı kapanışı her esere uygulama.
+Bilgi ile yorumu okunabilir bir bütün içinde birleştir; zorunlu “Bilgi / Yorum” blokları oluşturma. İddianın türü dilinden ve atfından anlaşılmalı. Her paragrafı kendi bilgi veya yorum katkısıyla gerekçelendir. Alt başlık, başlıksız deneme, kronolojik akış veya imge etrafında gelişen yapı arasında şarkıya göre seçim yap. Aynı başlıkları, aynı açılışı ve aynı kapanışı her esere uygulama.
 
 Şarkının ve sanatçının adını başlarda doğal biçimde belirt. Başlık kullanılacaksa yazının özgün odağını yansıtsın. Son paragrafta yeni kanıtsız iddia ekleme; geliştirilen okumadan çıkan son bir kavrayış, açılış ayrıntısının değişmiş anlamı veya somut bir dinleme noktası bırak. Metni tekrar özetleyip uzatma; her yazıyı öneri sorusuyla bitirme.
 
@@ -74,15 +70,13 @@ Bilgi ile yorumu okunabilir bir bütün içinde birleştir; zorunlu “Bilgi / Y
 
 ## Son okuma
 
-Taslağı bitirdikten sonra göndermeden önce metni bir kez baştan sona oku. Aşağıdaki maddelerle talimatlara uygunluğunu denetle ve bulduğun sorunları düzelt.
-
-Kapsamlı veya yorumu tartışmalı yazılarda, araçlar ve yetki elveriyorsa taslağı ayrıca bağımsız bir ajana incelet. Ajana taslağı, ilgili kaynakları ve denetim ölçütlerini ver. İncelemeyi kendi gerekçelerinle veya beklediğin sonuçla yönlendirmeden somut bulgular ve düzeltme önerileri iste. Bulguları kaynaklara ve kullanıcının isteğine göre değerlendir, gerekli düzeltmeleri uygula ve son kararı kendin ver. Bağımsız incelemenin mümkün olmadığı durumda kendi son okumanı tamamla.
+Göndermeden önce şu denetimi sessizce yap ve bulunan sorunu düzelt:
 
 1. Tarih, sürüm, yazar, alıntı ve açık gönderme iddialarının kaynaklarını gerçekten kontrol ettin mi? Kaynaklar ilgili cümleyi destekliyor mu?
 2. Bir sanatçı açıklamasını doğrulanmış yaşam olayıyla, anlatıcıyı sanatçıyla veya kendi benzetmeni belgelenmiş esin kaynağıyla karıştırdın mı?
-3. Her ana yorumun metinde görülebilir bir dayanağı var mı? Yazıya uygun yerlerde kısa söz alıntılarına yer verdin mi ve özgün bağlamlarını korudun mu? Alıntıdan yola çıkan paragrafların yorumları, o sözün öncesini ve sonrasını hesaba katıyor mu? Bağlamla veya karşı örnekle çelişen yorumları düzelt. Şarkının açık bıraktığı ayrıntılara olay, niyet veya zaman sırası ekleyen ifadeleri düzelt. İlk okumayı zorlayan önemli bir ayrıntı varsa yorumda payı olduğundan emin ol.
+3. Her ana yorumun metinde görülebilir bir dayanağı var mı? Bağlamla veya karşı örnekle çelişiyor mu? Yorumun tartışmaya açık olması tek başına kusur değildir.
 4. Şarkı adını değiştirince başka esere de uyacak paragrafları çıkarıp somutlaştırdın mı? Önceki yazılar görünüyorsa aynı giriş ve yapıyı gereksiz yere tekrarladın mı?
-5. Paragraflar birbirinden kopuk açıklamalar gibi okunuyorsa yazıyı düşüncenin değiştiği yerler etrafında yeniden kur. Girişte açılan merak yazının ilerleyişinde karşılık buluyor mu? Kapanış, sözlerin açık bıraktığı bir gerilimi gereksiz yere kapatıyor mu? Her bağlam bilgisi yer aldığı noktada okumaya katkı sağlıyor mu? Aynı ifadeyi veya yorumu büyük ölçüde yineleyen paragrafları, gerekli ayrıntıları koruyarak birleştir ya da sonraki paragrafta önceki düşünceye kısa bir gönderme yapıp yalnız yeni katkıyı anlat. Süslü genellemeleri ve dolgu geçişlerini ayıkla.
+5. Merak uyandırdığın noktaların karşılığını verdin mi? Yeni kavrayış getirmeyen tekrarları, süslü genellemeleri ve dolgu geçişlerini sildin mi?
 6. Kaynağı zayıf bir iddiayı daha etkileyici olsun diye kesinleştirdin mi? Söz veya kaynak kullanım sınırını aştın mı?
 
 Sonuç olarak araştırma raporunun günlüklerini değil, şarkıya özgü, dayanakları seçilebilen ve akıp giden nihai yazıyı sun.
