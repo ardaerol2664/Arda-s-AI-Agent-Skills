@@ -53,6 +53,8 @@ Yorum alanına geçerken “buradan bakınca”, “bu imgeyi … olarak okumak 
 
 Yazı boyunca arada şarkı sözlerinden kısa, birebir alıntılara yer ver. Alıntıları metnin duygusuna ve akışına uygun noktalarda doğal biçimde kullan; her alıntının ardından yorumun o ifadeden nasıl çıkarıldığını açıklamayı zorunlu tutma. Alıntılar şarkının sesini yazıya taşıyabilir veya ilgili bölümü hatırlatabilir. Sabit bir sayı ya da her paragrafta alıntı şartı koyma. Alıntının özgün bağlamını koru ve tüm alıntıları aşağıdaki toplam kullanım sınırı içinde planla. Yabancı dilde özgün ifadeyi koru; gerekiyorsa anlamını kısaca açıkla ve kendi çevirini sanatçının özgün sözü gibi sunma.
 
+Bir paragrafı bir söz alıntısından yola çıkarak kuruyorsan, o sözden hemen önce ve sonra söylenenleri birlikte oku ve yoruma yansıt. Yakın dizeler anlamı değiştiriyor, sınırlandırıyor veya tersine çeviriyorsa paragrafı buna göre kur. Gerekirse kıtanın ya da nakaratın bütününe bak. Çevredeki dizeleri de alıntılamak veya yorumun nasıl oluştuğunu adım adım açıklamak gerekmez.
+
 ## Yazıyı kurma
 
 Taslağı yazmadan [Yazı işçiliği](references/yazi-isciligi.md) rehberini oku. Araştırma tamamlandıktan sonra şarkıya özgü bir odak seç: bir çelişki, değişen hitap, küçük bir nesne, açıklanmayan bir sahne, kamusal hikâyeyle özel ses arasındaki gerilim olabilir. Metnin biçimini bu odağa göre tasarla.
@@ -76,7 +78,7 @@ Göndermeden önce şu denetimi sessizce yap ve bulunan sorunu düzelt:
 
 1. Tarih, sürüm, yazar, alıntı ve açık gönderme iddialarının kaynaklarını gerçekten kontrol ettin mi? Kaynaklar ilgili cümleyi destekliyor mu?
 2. Bir sanatçı açıklamasını doğrulanmış yaşam olayıyla, anlatıcıyı sanatçıyla veya kendi benzetmeni belgelenmiş esin kaynağıyla karıştırdın mı?
-3. Her ana yorumun metinde görülebilir bir dayanağı var mı? Yazıya uygun yerlerde kısa söz alıntılarına yer verdin mi ve özgün bağlamlarını korudun mu? Her alıntı için yorumun oluşumunu açıklamak gerekmez. Bağlamla veya karşı örnekle çelişiyor mu? Yorumun tartışmaya açık olması tek başına kusur değildir.
+3. Her ana yorumun metinde görülebilir bir dayanağı var mı? Yazıya uygun yerlerde kısa söz alıntılarına yer verdin mi ve özgün bağlamlarını korudun mu? Alıntıdan yola çıkan paragrafların yorumları, o sözün öncesini ve sonrasını hesaba katıyor mu? Bağlamla veya karşı örnekle çelişen yorumları düzelt. Yorumun tartışmaya açık olması tek başına kusur değildir.
 4. Şarkı adını değiştirince başka esere de uyacak paragrafları çıkarıp somutlaştırdın mı? Önceki yazılar görünüyorsa aynı giriş ve yapıyı gereksiz yere tekrarladın mı?
 5. Merak uyandırdığın noktaların karşılığını verdin mi? Yeni kavrayış getirmeyen tekrarları, süslü genellemeleri ve dolgu geçişlerini sildin mi?
 6. Kaynağı zayıf bir iddiayı daha etkileyici olsun diye kesinleştirdin mi? Söz veya kaynak kullanım sınırını aştın mı?
