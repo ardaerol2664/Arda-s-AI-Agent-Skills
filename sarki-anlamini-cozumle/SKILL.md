@@ -20,7 +20,7 @@ Meraklı, dikkatli, bağımsız düşünen bir müzik yazarı gibi davran. İyi 
 
 ## Araştırma ve epistemik ayrım
 
-Araştırmaya başlamadan [Araştırma ve kanıt](references/arastirma-ve-kanit.md) rehberini oku. Sözleri güvenilir bir metinden kontrol et; söz yazarı ile yorumcuyu ayır. Önce metnin kendi hareketini incele, sonra bağlamla yeniden değerlendir. İlk izlenimini doğrulayacak kaynaklar aramakla yetinme.
+Araştırmaya başlamadan [Araştırma ve kanıt](references/arastirma-ve-kanit.md) rehberini oku. Sözleri güvenilir bir metinden kontrol et; söz yazarı ile yorumcuyu ayır. Yerel çıkarımlara geçmeden önce şarkıyı baştan sona değerlendir. Anlatının ve duygunun şarkı boyunca nasıl değiştiğini, anlamı etkileyen doğrulanmış arka planla birlikte ele al. Ardından tek tek dizeleri ve imgeleri hem yakın çevreleri hem de şarkının bütünündeki işlevleri üzerinden yorumla. İlk izlenimini doğrulayacak kaynaklar aramakla yetinme.
 
 Çalışma notlarında iddiaların türünü ayır; kullanıcıya not dökümü veya muhakeme günlüğü gösterme:
 
@@ -46,6 +46,12 @@ Anlamı taşıyan birkaç ayrıntı seç ve aralarındaki ilişkiyi geliştir. A
 - Albüm içindeki konum, tür geleneği, üretim koşulları veya dönemin toplumsal bağlamını ancak okumanın bir noktasını aydınlatıyorsa ekle. Sanatçı biyografisini amaçsızca uzatma.
 - İşitsel malzemeye erişebildiysen söz–müzik ilişkisini kullan: neşeli düzenleme ile karanlık söz, sesin kırıldığı yer, beklenmedik duraklama gibi. Kaydı dinlemediysen dinlemiş gibi yazma; teknik iddiaları güvenilir bir kaynağa dayandır veya dışarıda bırak. Klip ve kayıt gözlemlerini ayrı tut.
 - Yabancı dilde deyim, argo, kültürel çağrışım veya sözcük oyununu gerektiğinde özgün dille kontrol et. Çeviri tercihinin yorumu değiştirdiği yeri açıkla.
+
+Aşağıdaki yöntemleri yalnızca şarkının sunduğu ayrıntı okumaya katkı sağlıyorsa kullan. Uygun olanı metnin akışına kat.
+
+- **Şarkının adı:** Ad ile şarkının bağlamı arasında yorumu aydınlatan somut bir bağ varsa bunu yazının içinde işle.
+- **Kısa söz alıntısı:** Önemli bir yorumda sözün özgün ifadesi anlatımı zenginleştiriyorsa gerekli kadarını kısa ve birebir alıntıla. Aşağıdaki alıntı sınırına uy.
+- **İğneleyici anlatım:** Hiciv, ironi veya alay için sözlerde ya da kayıtta dayanak varsa ve bu unsur anlamı etkiliyorsa gözden kaçırma. İğnelemeyi taşıyan ifadeyi göster. Hedefi belirlenebiliyorsa kime veya neye yöneldiğini açıkla.
 
 Yorumun kesin ispatlanmasını veya sanatçı tarafından onaylanmasını şart koşma. Dayanağı görülebilen, bağlamla çelişmeyen, şarkının ayrıntılarını birbirine bağlayan bir okuma yeterlidir. Buna karşıt bir ayrıntı varsa görmezden gelme; yorumunu daralt veya zenginleştir. İkinci okuma ancak anlamlı bir fark getiriyorsa ekle; her ihtimali eşit ağırlıkta sıralama.
 
