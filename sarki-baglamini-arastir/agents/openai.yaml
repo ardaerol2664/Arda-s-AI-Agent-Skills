@@ -1,0 +1,4 @@
+interface:
+  display_name: "Şarkı Bağlamını Araştır"
+  short_description: "Şarkı sözlerini ve göndermelerini kaynaklarla incele"
+  default_prompt: "$sarki-baglamini-arastir ile bu şarkının sözlerini, bağlamını ve göndermelerini araştırıp bir okuma metni yaz."
