@@ -1,0 +1,14 @@
+interface:
+  display_name: Şarkının İçinden-old
+  short_description: Şarkıların anlamını, bağlamını ve referanslarını araştır
+  default_prompt: $sarki-anlamini-cozumle-old ile bu şarkının sözlerini, bağlamını ve
+    sanatsal anlamını araştırıp akıcı bir yazıyla anlat.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
