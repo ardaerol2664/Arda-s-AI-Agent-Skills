@@ -1,5 +1,7 @@
 # Güncel durum
 
+2026-11-26. `codex-replica`, Jake Schincariol’un Replica paketinden Codex için uyarlandı. Kaynak araştırması, özgün uygulama tasarımı ve davranış doğrulaması tek skill altında yer alıyor. Yerelde skill biçimi, arayüz metadatası, göreli bağlantılar ve upstream lisans metni kontrol edildi.
+
 2026-11-18: `ders-konu-anlatimi` ve `molekul-3b-modelle` için Türkçe README dosyaları eklendi. Amaç, kullanım örnekleri, gereksinimler, dosya haritası ve doğrulama sınırları mevcut SKILL.md içeriklerine göre açıklandı. Beceri talimatları ve uygulama kodları değiştirilmedi.
 
 ## Amaç ve dosya haritası
@@ -14,6 +16,7 @@ Bu depo yeniden kullanılabilir AI ajan skill'lerini bir arada tutar. Her skill 
 - `codex-code-simplifier/`: İstenen kodu davranış ve sözleşmeleri koruyarak daha anlaşılır hâle getirir. Kaynak, lisans ve kullanım: kendi README.md dosyasında.
 - `codex-feature-dev/`: Yeni özellikleri keşif, gereksinim, tasarım, uygulama ve inceleme aşamalarıyla geliştirir. Kaynak, lisans ve kullanım: kendi README.md dosyasında.
 - `codex-claude-md-management/`: Mevcut proje talimatları ve bağlam dosyalarını denetler; PROJE_BAGLAMI.md ve AGENTS.md görevlerini ayırır. Kaynak, lisans ve kullanım: kendi README.md dosyasında.
+- `codex-replica/`: belgelenmiş davranışı araştırır, bağımsız uygulama tasarlar ve doğrular. Upstream revizyonu, değişiklikler ve MIT lisansı [README](codex-replica/README.md) dosyasında.
 - `LICENSE`: mevcut depo kök lisansı; değiştirilmedi. Yeni beş becerinin kendi LICENSE dosyalarında Apache 2.0 metni korunur.
 
 ## Kararlar ve doğrulama

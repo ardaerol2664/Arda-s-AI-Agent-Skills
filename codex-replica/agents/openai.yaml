@@ -1,0 +1,4 @@
+interface:
+  display_name: "Replica for Codex"
+  short_description: "Research and verify reference behavior"
+  default_prompt: "Use $codex-replica to research a documented workflow and specify behavior for an independent implementation."
